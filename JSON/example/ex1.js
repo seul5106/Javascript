@@ -20,7 +20,7 @@ console.log(result);
 
 
 
-for (const b of blood_data){
+for (const b of key){
     result[b]++;
 }
 console.log(result);

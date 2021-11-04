@@ -2,7 +2,7 @@ covid19 = [
     {'0125': 426}, {'0126': 343}, {'0127': 547}, {'0128': 490}, 
     {'0129': 460}, {'0130': 443}, {'0131': 338}, {'0201': 299}
 ]
-
+/**
 for(let i = 0; i < covid19.length-1; i++){
     for(let j = i+1; j<covid19.length; j++){
         if(covid19[i][(Object.keys(covid19[i]))] > covid19[j][(Object.keys(covid19[j]))]){
@@ -15,7 +15,7 @@ for(let i = 0; i < covid19.length-1; i++){
     
 }
 console.log(covid19);
-
+**/
 
 for(let i = 0; i < covid19.length-1; i++){
     // i번째 json의 key를 저장하기 위한 변수

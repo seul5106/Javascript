@@ -22,11 +22,12 @@ for(const j of covid19){
     for (const k in j){
         if (max_active < j[k]){
             max_active = j[k]
-            
+            max_day = k;
         }
 
     }
 }
 
+console.log("확진자가 가장 많이 나타난 날: ", max_day);
 
 //값을 반환하는게 아닌 처리가 목적이면 그냥 return키워드만 써도됨
