@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="viewer">
+        <a href="페이지주소" id="bannerLink"><img src="../img/img01.jpg" id="bannerImg" width="200"></a>
+    </div>
+    <script>
+        const imgList = ["../img/img01.jpg", "../img/img02.jpg", "../img/img03.jpg"]
+        const urlList = ["https://www.naver.com", "https://www.daum.net", "https://www.google.com"]
+
+        let currentIndex = 0;
+
+        setInterval(()=>{
+            document.querySelector("#bannerImg").setAttribute("src", imgList[currentIndex]);
+            document.querySelector("#bannerLink").setAttribute("href", urlList[currentIndex]);
+            
+            /*
+            currentIndex++;
+            if(currentIndex >= imgList.length){
+                currentIndex = 0;
+            }
+            */
+
+            currentIndex = (currentIndex + 1)%imgList.length;
+        }, 3000);
+
+
+        
+    </script>
+</body>
+
+</html>

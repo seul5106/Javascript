@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <button type="button" class = "sizeBtn" data-size="320x240">320x240</button>
+    <button type="button" class = "sizeBtn" data-size="640x480">640x480</button>
+    <button type="button" class = "sizeBtn" data-size="800x600">800x600</button>
+    <img id = "img" src="../img/img01.jpg"/>
+    <script>
+        const btn = document.querySelectorAll(".sizeBtn");
+        
+        
+        for(item of btn) {
+            item.addEventListener("click", e=>{
+            let size = e.currentTarget.dataset.size;
+            console.log(size);
+            
+            const p = size.indexOf("x");
+            const width = size.substring(0,p);
+            const height = size.substring(p+1)
+
+            const img = document.querySelector("#img");
+            img.style.width = width + "px";
+            img.style.height = height + "px";
+            /*
+            if(size == "320x240"){
+                document.getElementById("img").style.width ="320px"
+                document.getElementById("img").style.height ="240px"
+            }else if(size == "640x480"){
+                document.getElementById("img").style.width ="640px"
+                document.getElementById("img").style.height ="480px"
+            }else if(size == "800x600"){
+                document.getElementById("img").style.width ="800px"
+                document.getElementById("img").style.height ="600px"
+            }
+            */
+        });
+        }
+
+
+    </script>
+</body>
+</html>

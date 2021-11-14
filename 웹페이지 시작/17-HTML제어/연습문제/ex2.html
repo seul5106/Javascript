@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button type="button" class="startbtn" data-line="5">5행</button>
+    <button type="button" class="startbtn" data-line="10">10행</button>
+    <button type="button" class="startbtn" data-line="15">15행</button>
+    <br>
+    <a id="console"></a>
+    <script>
+        const btn = document.querySelectorAll(".startbtn")
+
+        for (const set of btn) {
+
+            set.addEventListener("click", e => {
+                let line = parseInt(e.currentTarget.dataset.line);
+                console.log(line);
+                var star = '';
+                for (var i = 0; i < line; i++) {
+                    for (var j = 0; j <= i; j++) {
+                        star += '*';
+                    }
+                    star += '<br>';
+                }
+                document.getElementById("console").innerHTML = star;
+
+
+            });
+        }
+
+    </script>
+
+</body>
+
+</html>

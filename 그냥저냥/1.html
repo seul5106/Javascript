@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="form-horizontal" name="join_form" id="join_form">
+        <div class="form-group">
+            <label for="user_id" class="col-md-2">아이디<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="text" name="user_id" id="user_id" class="form-control" />
+            </div>
+        </div>
+
+       <!-- <div class="form-group">
+            <label for="user_pw" class="col-md-2">비밀번호<span class="identify">*</span></label>
+            <div class="col-md-10">
+                <input type="text" name="user_pw" id="user_pw" class="form-control" />
+            </div>
+        </div>
+    -->
+    <!--    <button type ="submit" class="btn" >입력값 확인</button> -->
+    
+    </form>
+
+
+        <script src="1.js"></script>
+        
+
+        <script>
+
+            
+            document.querySelector("#join_form").addEventListener("submit", e => {
+                console.log("asdasdasd")
+                e.preventDefault();
+                
+                const c = new Createid();
+                console.log(document.querySelector("#user_id"));
+
+                if(!c.value("#user_id", "값을 입력하시오")){return false;}
+
+
+                if(!c.value("#user_pw", "값을 입력하시오")){return false;}
+
+                alert('입력형식완료');
+            })
+            
+            
+        </script>
+</body>
+</html>
