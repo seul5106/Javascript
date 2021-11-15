@@ -7,7 +7,7 @@
  */
 
 
- class member {
+ class Member {
     /**
      * 값이 존재하는지 검사한다.
      * @param {string} selector 입력요소에 해당하는 css 선택자
@@ -176,6 +176,12 @@
         return this.field(selector, msg, /(?:(?:18|19|20|21)[0-9]{2})/g);
     }
 
+    /**
+     * 날짜의 day부분
+     * @param {string} selector 
+     * @param {string} msg 
+     * @returns 
+     */
     day(selector, msg) {
         const value = document.querySelector(selector).value.trim();
         if(value>31){
