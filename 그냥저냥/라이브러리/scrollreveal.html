@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form-horizontal{
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .scroll {
+            border: 1px solid #ccc;
+            margin-bottom: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="form-horizontal">
+        <h1 class="headline">
+            Widget Inc.
+        </h1>
+        <p class="tagline">
+            The perfect widgets.
+            <span class="punchline">Forever.</span>
+        </p>
+
+        <div class="scroll">
+            <img src="img/001.png" />
+            <a class="Explanation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</a>
+        </div>
+
+        <div class="scroll">
+            <img src="img/002.png" />
+            <a  class="Explanation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</a>
+        </div>
+
+        <div class="scroll">
+            <img src="img/003.png" />
+            <a  class="Explanation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</a>
+        </div>
+
+        <div class="scroll">
+            <img src="img/004.png" />
+            <a  class="Explanation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</a>
+        </div>
+
+        <div class="scroll">
+            <img src="img/005.png" />
+            <a  class="Explanation">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</a>
+        </div>
+
+      
+    </form>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript">
+        ScrollReveal({ reset: true }); //해놓지 않을 경우 스크롤 화면을 벗어났을때 초기화가 되지 않음
+        ScrollReveal().reveal('.headline');
+        ScrollReveal().reveal('.tagline', { delay: 500 });
+        ScrollReveal().reveal('.punchline', { delay: 2000 });
+
+        ScrollReveal().reveal('.scroll',{delay: 500});
+        ScrollReveal().reveal('.Explanation', {delay: 1000});
+    </script>
+
+</body>
+
+</html>
