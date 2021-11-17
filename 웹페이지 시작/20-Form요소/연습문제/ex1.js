@@ -151,36 +151,16 @@
     cellphone(selector, msg) {
         return this.field(selector, msg, /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/);
     }
-
-    telephone(selector, msg) {
-        return this.field(selector, msg, /^\d{2,3}\d{3,4}\d{4}$/);
-    }
-
-    phone(selector, msg) {
-        let check1 = /^01(?:0|1|[6-9])(?:\d{3}|\d{4}\d{4}$)/;
-        let check2 = /^\d{2,3}\d{3,4}\d{4}$/;
-
-        const field = document.querySelector(selector);
-        let src = field.value.trim();
-
-        if(!src || (!check1.test(src) && !check2.test(src))){
-            alert(msg);
-            field.value = "";
-            field.focus();
-            return false;
-        }
-        return true;
-    }
-
+    
     since(selector, msg){
         return this.field(selector, msg, /(?:(?:18|19|20|21)[0-9]{2})/g);
     }
 
     /**
-     * 날짜의 day부분
-     * @param {string} selector 
-     * @param {string} msg 
-     * @returns 
+     * 날짜의 day부분(1일부터 31일)을 판별하는 판별식
+     * @param {string} selector 입력 요소에 해당하는 css선택자
+     * @param {string} msg  표시할 메시지
+     * @returns {boolean}   판별식을 충족하지 못할 경우 false/ 충족할 경우 true
      */
     day(selector, msg) {
         const value = document.querySelector(selector).value.trim();

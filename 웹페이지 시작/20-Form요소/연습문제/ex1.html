@@ -17,20 +17,6 @@
             padding: 0 10px;
         }
 
-        .form-group:after {
-            content: "";
-            display: block;
-            clear: both;
-            float: none;
-        }
-
-        .clearfix:after {
-            content: "";
-            display: block;
-            clear: both;
-            float: none;
-        }
-
         .form-group {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -108,7 +94,7 @@
             cursor: pointer;
         }
 
-        img {
+        .logo {
             padding-top: 50px;
             margin-left: 180px;
         }
@@ -245,6 +231,9 @@
 
             <div class="form-group">
                 <select id="nationNo" name="nationNo" class="col-md-10 form-control" aria-label="전화번호 입력">
+                    <option value="">
+                        국가번호 선택
+                    </option>
                     <option value="233">
                         가나 +233
                     </option>
@@ -320,7 +309,7 @@
                     <option value="505">
                         니카라과 +505
                     </option>
-                    <option value="82" selected="">
+                    <option value="82">
                         대한민국 +82
                     </option>
                     <option value="45">
@@ -898,7 +887,6 @@
                     <button type="button" class="btn" style="width: 30%; height: 49px; ">인증번호 받기</button>
                     <input type="text" name="asign" class="form-control set-align" placeholder="인증번호 입력하세요"/>
                 </div>
-
             </div>
 
             <div class="form-group">
@@ -946,7 +934,7 @@
             if (!member.checked("#nationNo", "국가를 선택해주세요.")) { return false; }
 
             if (!member.value("#tel", "연락처를 입력하세요.")) { return false; }
-            if (!member.phone("#tel", "연락처 형식이 잘못되었습니다.")) { return false; }
+            if (!member.cellphone("#tel", "연락처 형식이 잘못되었습니다.")) { return false; }
 
             alert("모든 검사 완료");
         });
