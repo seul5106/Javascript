@@ -52,7 +52,7 @@
         for(let t of title){
             t.addEventListener("click", e=>{
                 const current = e.currentTarget;
-                current.classList.toggle("active");
+                
                 const parent = current.closest(".collapse");
                 console.log(parent)
                 const content = parent.querySelector(".content");

@@ -7,7 +7,7 @@
  */
 
 
- class Member {
+class Member {
     /**
      * 값이 존재하는지 검사한다.
      * @param {string} selector 입력요소에 해당하는 css 선택자
@@ -18,7 +18,7 @@
         const field = document.querySelector(selector);
         const content = field.value.trim();
 
-        if(!content){
+        if (!content) {
             alert(msg);
             field.focus();
             return false;
@@ -36,7 +36,7 @@
     max_length(selector, len, msg) {
         const field = document.querySelector(selector);
         const content = field.value.trim();
-        if (content.length > len){
+        if (content.length > len) {
             alert(msg);
             field.value = "";
             field.focus();
@@ -53,26 +53,26 @@
      * @return {boolean} 지정된 글자수 이상인 경우 true / 미만인 경우 false  
      */
     min_length(selector, len, msg) {
-        const field = document.querySelector(selector);
-        const content = field.value.trim();
-        if (content.length < len){
-            alert(msg);
-            field.value = "";
-            field.focus();
-            return false;
+            const field = document.querySelector(selector);
+            const content = field.value.trim();
+            if (content.length < len) {
+                alert(msg);
+                field.value = "";
+                field.focus();
+                return false;
+            }
+            return true;
         }
-        return true;
-    }
-    /**
-     * 선택되어있는 값이 비어있는지 체크한다.
-     * @param {string} selector 입력요소에 해당하는 css 선택자
-     * @param {string} msg 값이 없을 경우 표시될 메시지
-     * @returns {boolean} 값이 존재할 경우 ture / 비어있을 경우 false
-     */
-    checked(selector, msg){
+        /**
+         * 선택되어있는 값이 비어있는지 체크한다.
+         * @param {string} selector 입력요소에 해당하는 css 선택자
+         * @param {string} msg 값이 없을 경우 표시될 메시지
+         * @returns {boolean} 값이 존재할 경우 ture / 비어있을 경우 false
+         */
+    checked(selector, msg) {
         const value = document.querySelector(selector).value;
-       
-        if (!value){
+
+        if (!value) {
             alert(msg);
             return false;
         }
@@ -94,7 +94,7 @@
         let src = first.value.trim();
         let dsc = second.value.trim();
 
-        if(src != dsc){
+        if (src != dsc) {
             alert(msg);
             first.value = "";
             second.value = "";
@@ -115,9 +115,9 @@
         const field = document.querySelector(selector);
         let src = field.value.trim();
 
-        if(!src || !regexp.test(src)) {
+        if (!src || !regexp.test(src)) {
             alert(msg);
-            field.value="";
+            field.value = "";
             field.focus();
             return false;
         }
@@ -151,8 +151,8 @@
     cellphone(selector, msg) {
         return this.field(selector, msg, /^01(?:0|1|[6-9])(?:\d{3}|\d{4})\d{4}$/);
     }
-    
-    since(selector, msg){
+
+    since(selector, msg) {
         return this.field(selector, msg, /(?:(?:18|19|20|21)[0-9]{2})/g);
     }
 
@@ -164,10 +164,10 @@
      */
     day(selector, msg) {
         const value = document.querySelector(selector).value.trim();
-        if(value>31){
+        if (value > 31) {
             alert(msg);
             return false;
-        }else if(value<0){
+        } else if (value < 0) {
             alert(msg);
             return false;
         }
