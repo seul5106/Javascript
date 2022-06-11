@@ -6,7 +6,7 @@ const yy = date1.getFullYear();
 const mm = date1.getMonth() + 1;
 const dd = date1.getDate();
 
-const i = date1.getDate();
+const i = date1.getDay();
 const day = days[i];
 
 const hh = date1.getHours();
@@ -34,7 +34,7 @@ console.log(date1.toLocaleTimeString("ko-KR"));
 let date2 = new Date(2021, 9, 5);
 console.log(date2.toLocaleString("ko-KR"));
 
-let date3 = new Date(2021,9,5,21,19,31);
+let date3 = new Date(2021, 9, 5, 21, 19, 31);
 console.log(date3.toLocaleString("ko-KR"));
 
 date3.setYear(2010);
